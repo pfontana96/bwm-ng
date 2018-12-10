@@ -5,6 +5,8 @@ import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
 import { RentalComponent } from './rental.component';
 import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from '@angular/common/http';
+import { NgPipesModule } from 'ngx-pipes';
 
 import { RentalService } from './shared/rental.service';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
@@ -26,7 +28,9 @@ const routes: Routes = [
         RentalDetailComponent
     ],
     imports: [BrowserModule,
-    RouterModule.forChild(routes)],
+    RouterModule.forChild(routes),
+    HttpClientModule,
+    NgPipesModule],
     providers: [RentalService]
 })
 export class RentalModule {}
