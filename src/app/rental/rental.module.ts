@@ -7,6 +7,7 @@ import { RentalComponent } from './rental.component';
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule } from 'ngx-pipes';
+import { MapModule } from '../common/map/map.module';
 
 import { RentalService } from './shared/rental.service';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
     imports: [BrowserModule,
     RouterModule.forChild(routes),
     HttpClientModule,
-    NgPipesModule],
+    NgPipesModule,
+    MapModule],
     providers: [RentalService]
 })
 export class RentalModule {}
