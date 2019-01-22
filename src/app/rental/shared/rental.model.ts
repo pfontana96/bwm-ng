@@ -5,7 +5,7 @@ export class Rental{
     street:     string;
     category:   string;
     image:      string;
-    beedrooms:  number;
+    bedrooms:  number;
     description:string;
     dailyRate:  number;
     shared:     boolean;
